@@ -69,6 +69,8 @@ const Projects = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          dots: true,
+          arrows: false,
         },
       },
     ],
@@ -76,25 +78,28 @@ const Projects = () => {
 
   return (
     <>
-      <section id="projects" className="py-20 bg-gray-50 dark:bg-[#0f172a]">
-        <div className="max-w-7xl mx-auto px-6 md:px-24">
+      <section
+        id="projects"
+        className="py-12 sm:py-20 bg-gray-50 dark:bg-[#0f172a]"
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-24">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="space-y-12"
+            className="space-y-8 sm:space-y-12"
           >
             {/* Section Header */}
             <div className="text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">
                 Featured Projects
               </h2>
-              <div className="w-24 h-1 bg-[#6366f1] mx-auto mt-4 rounded-full" />
+              <div className="w-16 sm:w-24 h-1 bg-[#6366f1] mx-auto mt-3 sm:mt-4 rounded-full" />
             </div>
 
             {/* Projects Carousel */}
-            <div className="px-4">
+            <div className="px-2 sm:px-4">
               <Slider {...sliderSettings}>
                 {projects.map((project, index) => (
                   <div key={index} className="px-2 h-full flex items-stretch">
@@ -107,22 +112,22 @@ const Projects = () => {
                         scale: 1.04,
                         boxShadow: "0 8px 32px rgba(99,102,241,0.15)",
                       }}
-                      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm transition-all duration-300 flex flex-col h-[440px] max-w-sm w-full mx-auto"
+                      className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm transition-all duration-300 flex flex-col h-[400px] sm:h-[440px] max-w-sm w-full mx-auto"
                     >
-                      <div className="p-6 flex flex-col h-full">
+                      <div className="p-4 sm:p-6 flex flex-col h-full">
                         <div className="flex flex-col flex-grow">
                           <div className="flex items-center justify-between">
-                            <span className="text-sm text-[#6366f1]">
+                            <span className="text-xs sm:text-sm text-[#6366f1]">
                               {project.category}
                             </span>
-                            <span className="text-sm text-gray-500 dark:text-gray-400">
+                            <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                               {project.year}
                             </span>
                           </div>
-                          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-4">
+                          <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mt-3 sm:mt-4">
                             {project.title}
                           </h3>
-                          <p className="text-gray-600 dark:text-gray-400 mt-2 flex-grow">
+                          <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mt-2 flex-grow">
                             {project.description}
                           </p>
                         </div>
@@ -132,11 +137,11 @@ const Projects = () => {
                               href={project.link}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center px-3 py-1.5 bg-orange-100 text-orange-600 rounded-full text-sm font-medium hover:bg-orange-200 transition-colors"
+                              className="inline-flex items-center px-3 py-1.5 bg-orange-100 text-orange-600 rounded-full text-xs sm:text-sm font-medium hover:bg-orange-200 transition-colors"
                             >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                className="w-4 h-4 mr-1.5"
+                                className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5"
                                 viewBox="0 0 24 24"
                                 fill="none"
                                 stroke="currentColor"
@@ -156,9 +161,9 @@ const Projects = () => {
                               href={project.github}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="inline-flex items-center px-3 py-1.5 bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300 rounded-full text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                              className="inline-flex items-center px-3 py-1.5 bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300 rounded-full text-xs sm:text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
                             >
-                              <FaGithub className="w-4 h-4 mr-1.5" />
+                              <FaGithub className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5" />
                               Source Code
                             </a>
                           )}
@@ -173,36 +178,36 @@ const Projects = () => {
         </div>
       </section>
 
-      {/* Let's Connect Section - Moved to bottom with extra padding */}
+      {/* Let's Connect Section */}
       <section
         id="connect"
-        className="py-32 bg-gray-100 dark:bg-[#0f172a] mt-auto"
+        className="py-20 sm:py-32 bg-gray-100 dark:bg-[#0f172a] mt-auto"
       >
-        <div className="max-w-4xl mx-auto px-6 text-center">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="space-y-12"
+            className="space-y-8 sm:space-y-12"
           >
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-8">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6 sm:mb-8">
               Let's Connect
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400">
+            <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400">
               Got an exciting idea or just want to chat? I'm all ears and love
               connecting!
             </p>
 
             {/* Contact Information */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               <a
                 href="tel:+18736882192"
                 className="flex items-center justify-center space-x-4 hover:opacity-75 transition-opacity"
               >
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900/20">
                   <svg
-                    className="w-6 h-6 text-red-500"
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-red-500"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -216,10 +221,10 @@ const Projects = () => {
                   </svg>
                 </div>
                 <div className="text-left">
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                     Phone
                   </p>
-                  <p className="text-base font-medium text-gray-900 dark:text-white">
+                  <p className="text-sm sm:text-base font-medium text-gray-900 dark:text-white">
                     +1 (873) 688-2192
                   </p>
                 </div>
@@ -229,9 +234,9 @@ const Projects = () => {
                 href="mailto:tejaswinihs95@gmail.com?subject=Let's%20Connect%20-%20Portfolio%20Inquiry&body=Hi%20Tejaswini,%0D%0A%0D%0AI%20came%20across%20your%20portfolio%20and%20would%20like%20to%20connect."
                 className="flex items-center justify-center space-x-4 hover:opacity-75 transition-opacity"
               >
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/20">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/20">
                   <svg
-                    className="w-6 h-6 text-purple-500"
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-purple-500"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -245,10 +250,10 @@ const Projects = () => {
                   </svg>
                 </div>
                 <div className="text-left">
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                     Email
                   </p>
-                  <p className="text-base font-medium text-gray-900 dark:text-white">
+                  <p className="text-sm sm:text-base font-medium text-gray-900 dark:text-white">
                     tejaswinihs95@gmail.com
                   </p>
                 </div>
@@ -260,9 +265,9 @@ const Projects = () => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center space-x-4 hover:opacity-75 transition-opacity"
               >
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/20">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/20">
                   <svg
-                    className="w-6 h-6 text-blue-500"
+                    className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -282,10 +287,10 @@ const Projects = () => {
                   </svg>
                 </div>
                 <div className="text-left">
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                  <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                     Location
                   </p>
-                  <p className="text-base font-medium text-gray-900 dark:text-white">
+                  <p className="text-sm sm:text-base font-medium text-gray-900 dark:text-white">
                     Vancouver, Canada
                   </p>
                 </div>
@@ -293,14 +298,14 @@ const Projects = () => {
             </div>
 
             {/* Social Links */}
-            <div className="flex justify-center space-x-6 pt-8">
+            <div className="flex justify-center space-x-4 sm:space-x-6 pt-6 sm:pt-8">
               <a
                 href="https://www.linkedin.com/in/tejaswinihs/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-[#0077b5] transition-colors"
               >
-                <FaLinkedin className="w-6 h-6" />
+                <FaLinkedin className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a
                 href="https://github.com/tejaswinihs14?tab=repositories"
@@ -308,7 +313,7 @@ const Projects = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
               >
-                <FaGithub className="w-6 h-6" />
+                <FaGithub className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a
                 href="https://leetcode.com/u/tejaswinihelagallishivabasappa/"
@@ -316,7 +321,7 @@ const Projects = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-[#FFA116] transition-colors"
               >
-                <SiLeetcode className="w-6 h-6" />
+                <SiLeetcode className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a
                 href="https://www.instagram.com/tejaswinii.gowda/"
@@ -324,12 +329,12 @@ const Projects = () => {
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-[#E4405F] transition-colors"
               >
-                <FaInstagram className="w-6 h-6" />
+                <FaInstagram className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
             </div>
 
             {/* Copyright */}
-            <div className="pt-8 text-sm text-gray-500 dark:text-gray-400">
+            <div className="pt-6 sm:pt-8 text-xs sm:text-sm text-gray-500 dark:text-gray-400">
               © 2025 Tejaswini H S. All rights reserved.
             </div>
           </motion.div>

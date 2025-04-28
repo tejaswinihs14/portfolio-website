@@ -45,7 +45,6 @@ import {
   SiCypress,
   SiStorybook,
   SiJest,
-  //   SiPlaywright,
   SiGraphql,
   SiPostman,
   SiGooglecloud,
@@ -561,22 +560,25 @@ const Experience = () => {
   };
 
   return (
-    <section id="experience" className="py-24 bg-white dark:bg-[#0f172a]">
-      <div className="max-w-7xl mx-auto px-6">
+    <section
+      id="experience"
+      className="py-16 sm:py-24 bg-white dark:bg-[#0f172a]"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="space-y-20"
+          className="space-y-12 sm:space-y-20"
         >
           {/* Section Header */}
-          <h2 className="text-5xl font-bold text-center text-gray-900 dark:text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white">
             Experience & Skills
           </h2>
 
           {/* Experience Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 h-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10 h-full">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -588,38 +590,38 @@ const Experience = () => {
               >
                 <div className="bg-white dark:bg-gray-800/50 rounded-xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full w-full relative hover:scale-[1.02] transform hover:-translate-y-1 cursor-pointer overflow-hidden">
                   <div className="flex flex-col h-full">
-                    <div className="flex items-start gap-6">
-                      <div className="w-16 h-16 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center p-2 flex-shrink-0">
+                    <div className="flex items-start gap-4 sm:gap-6">
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center p-2 flex-shrink-0">
                         <img
                           src={exp.logo}
                           alt={exp.company}
-                          className="w-12 h-12 object-contain"
+                          className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                         />
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white truncate">
                           {exp.role}
                         </h3>
-                        <p className="text-lg text-blue-500 dark:text-blue-400">
+                        <p className="text-base sm:text-lg text-blue-500 dark:text-blue-400 truncate">
                           {exp.company}
                         </p>
-                        <p className="text-base text-blue-500/80 dark:text-blue-400/80">
+                        <p className="text-sm sm:text-base text-blue-500/80 dark:text-blue-400/80">
                           {exp.period}
                         </p>
-                        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 line-clamp-2">
+                        <p className="mt-2 sm:mt-4 text-sm sm:text-lg text-gray-600 dark:text-gray-400 line-clamp-2">
                           {exp.description}
                         </p>
                       </div>
                     </div>
 
-                    <div className="mt-auto">
-                      <div className="flex flex-wrap gap-2 w-full min-w-0 mt-6">
+                    <div className="mt-4 sm:mt-auto">
+                      <div className="flex flex-wrap gap-2 w-full min-w-0 mt-4 sm:mt-6">
                         {exp.type === "education" ? (
                           // Show all skills for education
                           exp.skills.map((skill, idx) => (
                             <span
                               key={idx}
-                              className="px-4 py-1.5 text-sm bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full max-w-full truncate break-words"
+                              className="px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full max-w-full truncate break-words"
                             >
                               {skill}
                             </span>
@@ -630,13 +632,13 @@ const Experience = () => {
                             {exp.skills.slice(0, 2).map((skill, idx) => (
                               <span
                                 key={idx}
-                                className="px-4 py-1.5 text-sm bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full max-w-full truncate break-words"
+                                className="px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full max-w-full truncate break-words"
                               >
                                 {skill}
                               </span>
                             ))}
                             {exp.skills[2] && (
-                              <span className="px-4 py-1.5 text-sm bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full max-w-full truncate break-words">
+                              <span className="px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full max-w-full truncate break-words">
                                 {exp.skills[2]}
                               </span>
                             )}
@@ -646,15 +648,15 @@ const Experience = () => {
                     </div>
                   </div>
 
-                  {/* View Details Button */}
+                  {/* View Details Button - Fixed positioning for mobile */}
                   {exp.type !== "education" && (
                     <button
                       onClick={() => setSelectedExp(exp)}
-                      className="absolute bottom-8 right-8 flex items-center gap-2 text-blue-500 hover:text-blue-600 bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-all duration-300 opacity-0 group-hover:opacity-100"
+                      className="absolute bottom-4 right-4 sm:bottom-8 sm:right-8 flex items-center gap-2 text-blue-500 hover:text-blue-600 bg-blue-50 hover:bg-blue-100 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg transition-all duration-300 opacity-0 group-hover:opacity-100 text-sm sm:text-base"
                     >
                       View Details
                       <svg
-                        className="w-4 h-4"
+                        className="w-3 h-3 sm:w-4 sm:h-4"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -674,18 +676,18 @@ const Experience = () => {
           </div>
 
           {/* Skills Section */}
-          <div className="pt-16">
-            <h3 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
+          <div className="pt-10 sm:pt-16">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-8 sm:mb-12">
               Technical Skills
             </h3>
 
-            {/* Category Tabs */}
-            <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {/* Category Tabs - Scrollable on mobile */}
+            <div className="flex overflow-x-auto pb-2 sm:pb-0 sm:flex-wrap justify-start sm:justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 scrollbar-hide">
               {Object.keys(skillsByCategory).map((category) => (
                 <button
                   key={category}
                   onClick={() => setActiveTab(category)}
-                  className={`px-6 py-2.5 rounded-full text-base font-medium transition-all duration-300 ${
+                  className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm sm:text-base font-medium transition-all duration-300 whitespace-nowrap ${
                     activeTab === category
                       ? "bg-blue-500 text-white"
                       : "bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-blue-50 dark:hover:bg-gray-700"
@@ -697,17 +699,19 @@ const Experience = () => {
             </div>
 
             {/* Skills Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
               {skillsByCategory[activeTab].map((skill, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: index * 0.05 }}
-                  className="bg-white dark:bg-gray-800/50 rounded-xl p-6 flex flex-col items-center justify-center text-center hover:shadow-lg transition-all duration-300"
+                  className="bg-white dark:bg-gray-800/50 rounded-xl p-4 sm:p-6 flex flex-col items-center justify-center text-center hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="text-3xl mb-3">{skill.icon}</div>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                  <div className="text-2xl sm:text-3xl mb-2 sm:mb-3">
+                    {skill.icon}
+                  </div>
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300">
                     {skill.title}
                   </p>
                 </motion.div>
@@ -728,34 +732,34 @@ const Experience = () => {
                   initial={{ scale: 0.95, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.95, opacity: 0 }}
-                  className="relative w-full max-w-4xl bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-2xl my-8 max-h-[90vh] overflow-y-auto"
+                  className="relative w-full max-w-4xl bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-8 shadow-2xl my-4 sm:my-8 max-h-[90vh] overflow-y-auto"
                 >
                   {/* Close Button */}
                   <button
                     onClick={() => setSelectedExp(null)}
-                    className="absolute top-6 right-6 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 z-10"
+                    className="absolute top-4 right-4 sm:top-6 sm:right-6 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 z-10"
                   >
-                    <IoClose size={28} />
+                    <IoClose size={24} className="sm:w-7 sm:h-7" />
                   </button>
 
                   {/* Modal Content */}
-                  <div className="space-y-8">
-                    <div className="flex items-center gap-6">
-                      <div className="w-20 h-20 rounded-xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center p-3">
+                  <div className="space-y-6 sm:space-y-8">
+                    <div className="flex items-center gap-4 sm:gap-6">
+                      <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-gray-100 dark:bg-gray-700 flex items-center justify-center p-2 sm:p-3">
                         <img
                           src={selectedExp.logo}
                           alt={selectedExp.company}
-                          className="w-14 h-14 object-contain"
+                          className="w-12 h-12 sm:w-14 sm:h-14 object-contain"
                         />
                       </div>
                       <div>
-                        <h3 className="text-3xl font-bold text-gray-900 dark:text-white">
+                        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
                           {selectedExp.role}
                         </h3>
-                        <p className="text-xl text-blue-500">
+                        <p className="text-lg sm:text-xl text-blue-500">
                           {selectedExp.company}
                         </p>
-                        <p className="text-lg text-gray-500 dark:text-gray-400">
+                        <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400">
                           {selectedExp.period}
                         </p>
                       </div>
@@ -763,17 +767,19 @@ const Experience = () => {
 
                     {/* Projects */}
                     {selectedExp.details.projects.map((project, idx) => (
-                      <div key={idx} className="space-y-4">
-                        <h4 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                      <div key={idx} className="space-y-3 sm:space-y-4">
+                        <h4 className="text-xl sm:text-2xl font-semibold text-gray-900 dark:text-white">
                           {project.title}
                         </h4>
-                        <ul className="space-y-3">
+                        <ul className="space-y-2 sm:space-y-3">
                           {project.points.map((point, pointIdx) => (
                             <li
                               key={pointIdx}
-                              className="flex items-start gap-3 text-lg text-gray-600 dark:text-gray-400"
+                              className="flex items-start gap-2 sm:gap-3 text-base sm:text-lg text-gray-600 dark:text-gray-400"
                             >
-                              <span className="text-blue-500 mt-1.5">•</span>
+                              <span className="text-blue-500 mt-1 sm:mt-1.5">
+                                •
+                              </span>
                               <span>{point}</span>
                             </li>
                           ))}
@@ -782,15 +788,15 @@ const Experience = () => {
                     ))}
 
                     {/* Technologies */}
-                    <div className="pt-6">
-                      <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                    <div className="pt-4 sm:pt-6">
+                      <h4 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4">
                         Technologies & Tools
                       </h4>
                       <div className="flex flex-wrap gap-2">
                         {selectedExp.details.technologies.map((tech, idx) => (
                           <span
                             key={idx}
-                            className="px-4 py-2 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full text-base"
+                            className="px-3 py-1.5 sm:px-4 sm:py-2 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full text-sm sm:text-base"
                           >
                             {tech}
                           </span>
