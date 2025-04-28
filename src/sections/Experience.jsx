@@ -279,7 +279,7 @@ const Experience = () => {
       role: "Associate Software Engineer",
       company: "Accenture Solution Pvd Ltd",
       period: "Nov 2017 - July 2019",
-      logo: process.env.PUBLIC_URL + "/AccentureLogo.png",
+      logo: process.env.PUBLIC_URL + "/accentureLogo.png",
       description:
         "Developed reusable UI components and optimized applications for major retail clients, focusing on user engagement and code efficiency.",
       skills: ["React", "JavaScript", "+7"],

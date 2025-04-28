@@ -107,26 +107,26 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="flex flex-wrap gap-6 mb-16"
               >
-                <button
-                  onClick={handleContactClick}
-                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg rounded-xl shadow-lg hover:from-pink-500 hover:to-purple-500 transition-all duration-300"
-                >
-                  Contact Me
-                </button>
-                <a
-                  href="/Resume_TEJASWINI.pdf"
-                  download
-                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-400 text-white text-lg rounded-xl shadow-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 flex items-center gap-2"
-                >
-                  <FaDownload className="text-xl" />
-                  Download CV
-                </a>
                 <a
                   href="#experience"
                   className="px-8 py-4 bg-transparent text-gray-900 dark:text-white text-lg rounded-xl border-2 border-gray-200 dark:border-gray-700 hover:border-[#9333EA] hover:text-[#9333EA] transition-all duration-300"
                 >
                   View Experience
                 </a>
+                <a
+                  href={process.env.PUBLIC_URL + "/Resume_TEJASWINI.pdf"}
+                  download
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-400 text-white text-lg rounded-xl shadow-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 flex items-center gap-2"
+                >
+                  <FaDownload className="text-xl" />
+                  Download CV
+                </a>
+                <button
+                  onClick={handleContactClick}
+                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white text-lg rounded-xl shadow-lg hover:from-pink-500 hover:to-purple-500 transition-all duration-300"
+                >
+                  Contact Me
+                </button>
               </motion.div>
 
               {/* Social Links */}
@@ -261,7 +261,7 @@ const Hero = () => {
                   Contact Me
                 </button>
                 <a
-                  href="/Resume_TEJASWINI.pdf"
+                  href={process.env.PUBLIC_URL + "/Resume_TEJASWINI.pdf"}
                   download
                   className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-cyan-400 text-white text-base sm:text-lg rounded-xl shadow-lg hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 flex items-center justify-center gap-2"
                 >
