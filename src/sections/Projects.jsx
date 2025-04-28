@@ -324,7 +324,7 @@ const Projects = () => {
                 <SiLeetcode className="w-5 h-5 sm:w-6 sm:h-6" />
               </a>
               <a
-                href="https://www.instagram.com/tejaswinii.gowda/"
+                href="https://www.instagram.com/tejaswinii.shivabasappa/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-[#E4405F] transition-colors"

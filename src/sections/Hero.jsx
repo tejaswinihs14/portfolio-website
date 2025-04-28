@@ -161,7 +161,7 @@ const Hero = () => {
                   <FaXTwitter size={28} />
                 </a>
                 <a
-                  href="https://www.instagram.com/tejaswinii.gowda/"
+                  href="https://www.instagram.com/tejaswinii.shivabasappa/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-[#9333EA] transition-colors duration-300"
