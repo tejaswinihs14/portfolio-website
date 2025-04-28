@@ -26,41 +26,92 @@ const About = () => {
           </div>
 
           {/* Main Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch max-w-6xl mx-auto">
             {/* Left Column - Image */}
-            <div className="relative">
-              <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden">
+            <div className="relative h-full">
+              <div className="w-full h-full rounded-3xl overflow-hidden">
                 <img
-                  src="/Profile.JPG"
+                  src="/Tejuuu.JPG"
                   alt="Tejaswini"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover rounded-3xl"
                 />
               </div>
             </div>
 
             {/* Right Column - Text Content */}
-            <div className="space-y-6">
+            <div className="space-y-6 flex flex-col h-full justify-center">
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white flex items-center gap-2">
                 👋 Hi, I'm Tejaswini
               </h3>
-              <p className="text-lg text-gray-600 dark:text-gray-400">
-                Frontend Engineer with a passion for building accessible,
-                responsive, and performant web applications across diverse
-                industries, including retail, AI/ML, defense, and media.
+              <p className="text-xl text-gray-600 dark:text-gray-400">
+                <span className="font-semibold text-blue-600">
+                  Frontend Engineer
+                </span>{" "}
+                with a passion for building{" "}
+                <span className="text-blue-600 font-semibold">accessible</span>,{" "}
+                <span className="text-blue-600 font-semibold">responsive</span>,
+                and{" "}
+                <span className="text-blue-600 font-semibold">
+                  performant web applications
+                </span>{" "}
+                across diverse industries, including{" "}
+                <span className="text-purple-600 font-semibold">retail</span>,{" "}
+                <span className="text-purple-600 font-semibold">AI/ML</span>,{" "}
+                <span className="text-purple-600 font-semibold">defense</span>,
+                and <span className="text-purple-600 font-semibold">media</span>
+                .
               </p>
-              <p className="text-lg text-gray-600 dark:text-gray-400">
-                My expertise spans modern frontend technologies like JavaScript,
-                React, Next.js, and TypeScript. I excel in building scalable
-                systems, integrating RESTful APIs, and implementing
-                comprehensive testing strategies using Jest and React Testing
-                Library.
+              <p className="text-xl text-gray-600 dark:text-gray-400">
+                My expertise spans modern frontend technologies like{" "}
+                <span className="text-blue-600 font-semibold">JavaScript</span>,{" "}
+                <span className="text-blue-600 font-semibold">React</span>,{" "}
+                <span className="text-blue-600 font-semibold">Next.js</span>,
+                and{" "}
+                <span className="text-blue-600 font-semibold">TypeScript</span>.
+                I excel in building{" "}
+                <span className="text-blue-600 font-semibold">
+                  scalable systems
+                </span>
+                , integrating{" "}
+                <span className="text-blue-600 font-semibold">
+                  RESTful APIs
+                </span>
+                , and implementing comprehensive{" "}
+                <span className="text-blue-600 font-semibold">
+                  testing strategies
+                </span>{" "}
+                using{" "}
+                <span className="text-purple-600 font-semibold">Jest</span> and{" "}
+                <span className="text-purple-600 font-semibold">
+                  React Testing Library
+                </span>
+                .
               </p>
-              <p className="text-lg text-gray-600 dark:text-gray-400">
-                I specialize in crafting innovative and user-centric web
-                interfaces with a strong focus on accessibility, design systems,
-                and clean code architecture. My experience includes
-                collaborating with design teams and implementing pixel-perfect
-                UI components.
+              <p className="text-xl text-gray-600 dark:text-gray-400">
+                I specialize in crafting{" "}
+                <span className="text-blue-600 font-semibold">innovative</span>{" "}
+                and{" "}
+                <span className="text-blue-600 font-semibold">
+                  user-centric web interfaces
+                </span>{" "}
+                with a strong focus on{" "}
+                <span className="text-blue-600 font-semibold">
+                  accessibility
+                </span>
+                ,{" "}
+                <span className="text-blue-600 font-semibold">
+                  design systems
+                </span>
+                , and{" "}
+                <span className="text-blue-600 font-semibold">
+                  clean code architecture
+                </span>
+                . My experience includes collaborating with design teams and
+                implementing{" "}
+                <span className="text-blue-600 font-semibold">
+                  pixel-perfect UI components
+                </span>
+                .
               </p>
 
               {/* Skills Section */}
@@ -87,7 +138,7 @@ const About = () => {
           </div>
 
           {/* Cards Section */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-24">
             {/* What I Do Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -188,78 +239,71 @@ const About = () => {
 
           {/* Core Values Section */}
           <div className="pt-20">
-            {/* Section Header */}
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white relative inline-block">
+            {/* Section Header with lines */}
+            <div className="flex items-center justify-center mb-16">
+              <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700 mx-4" />
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center whitespace-nowrap">
                 Core Values
-                <div className="absolute -left-16 -right-16 h-px bg-gray-200 dark:bg-gray-700 top-1/2">
-                  <div className="absolute -left-1 -right-1 h-px bg-[#9333EA]"></div>
-                </div>
               </h2>
+              <div className="flex-1 h-px bg-gray-200 dark:bg-gray-700 mx-4" />
             </div>
-
             {/* Values Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-              {/* Design-Driven */}
+              {/* Innovation First */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-center"
+                className="text-center bg-white/80 dark:bg-gray-800/60 rounded-3xl shadow-lg p-10 flex flex-col items-center justify-center"
               >
-                <div className="inline-block mb-6">
-                  <div className="w-16 h-16 rounded-full bg-blue-100/50 dark:bg-blue-900/20 flex items-center justify-center mx-auto">
-                    <BsPaletteFill className="text-2xl text-blue-500" />
-                  </div>
+                <div className="mb-6 flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-200 via-purple-200 to-white shadow-lg">
+                  <BsPaletteFill className="text-4xl text-[#7c3aed]" />
                 </div>
-                <h3 className="text-2xl font-bold text-blue-500 mb-4">
-                  Design-Driven
+                <h3 className="text-xl font-bold text-[#7c3aed] mb-2">
+                  Innovation First
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                <div className="w-10 h-1 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full mx-auto mb-4" />
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   I believe great design is the foundation of great user
                   experiences. From accessibility to responsiveness, I bring
                   designs to life with clean, elegant, and user-first code.
                 </p>
               </motion.div>
-
-              {/* Performance Obsessed */}
+              {/* Performance Driven */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-center"
+                className="text-center bg-white/80 dark:bg-gray-800/60 rounded-3xl shadow-lg p-10 flex flex-col items-center justify-center"
               >
-                <div className="inline-block mb-6">
-                  <div className="w-16 h-16 rounded-full bg-purple-100/50 dark:bg-purple-900/20 flex items-center justify-center mx-auto">
-                    <BsLightningChargeFill className="text-2xl text-purple-500" />
-                  </div>
+                <div className="mb-6 flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-orange-200 via-pink-200 to-white shadow-lg">
+                  <BsLightningChargeFill className="text-4xl text-[#f59e42]" />
                 </div>
-                <h3 className="text-2xl font-bold text-purple-500 mb-4">
-                  Performance Obsessed
+                <h3 className="text-xl font-bold text-[#f43f5e] mb-2">
+                  Performance Driven
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                <div className="w-10 h-1 bg-gradient-to-r from-orange-400 to-pink-400 rounded-full mx-auto mb-4" />
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   Speed matters. I build highly performant interfaces that load
                   fast, scale well, and feel native—leveraging lazy loading,
                   bundling, and real-time optimizations.
                 </p>
               </motion.div>
-
-              {/* UX-Focused Problem Solver */}
+              {/* Impact Focused */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-center"
+                className="text-center bg-white/80 dark:bg-gray-800/60 rounded-3xl shadow-lg p-10 flex flex-col items-center justify-center"
               >
-                <div className="inline-block mb-6">
-                  <div className="w-16 h-16 rounded-full bg-red-100/50 dark:bg-red-900/20 flex items-center justify-center mx-auto">
-                    <FaBrain className="text-2xl text-red-500" />
-                  </div>
+                <div className="mb-6 flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-yellow-200 via-orange-100 to-white shadow-lg">
+                  <FaBrain className="text-4xl text-[#fbbf24]" />
                 </div>
-                <h3 className="text-2xl font-bold text-red-500 mb-4">
-                  UX-Focused Problem Solver
+                <h3 className="text-xl font-bold text-[#f59e42] mb-2">
+                  Impact Focused
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                <div className="w-10 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full mx-auto mb-4" />
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
                   I build interfaces that solve real user problems. Through
                   empathy, feedback, and iteration, I turn complex flows into
                   intuitive, engaging experiences.

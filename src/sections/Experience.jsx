@@ -62,33 +62,36 @@ import { MdOutlineDesignServices } from "react-icons/md";
 
 const Experience = () => {
   const [selectedExp, setSelectedExp] = useState(null);
-  const [activeTab, setActiveTab] = useState("💻 Frontend Tech");
+  const [activeTab, setActiveTab] = useState("💻 Frontend Stack");
 
   const experiences = [
     {
       type: "professional",
       role: "Frontend Engineer",
       company: "Vosyn.Inc",
-      period: "2024 - Present",
+      period: "Nov 2024 - Present",
       logo: "/vosynLogo.png",
-      description: "Led frontend development for VosynVerse platform.",
-      skills: ["React", "Next.js", "TypeScript"],
+      description:
+        "Implemented and maintained Settings frontend development for VosynVerse platform.",
+      skills: ["React", "Next.js", "+5"],
       details: {
         projects: [
           {
-            title: "VosynVerse Platform Enhancement",
+            title: "VosynVerse Platform Development",
             points: [
-              "Implemented real-time collaboration features using WebSocket",
-              "Developed responsive dashboard with Material-UI components",
-              "Optimized application performance, reducing load time by 40%",
+              "Contributed to the development of VosynVerse, a Next-based multimedia streaming platform, delivering high-impact features like View History, Dark Mode, and Settings customization",
+              "Built and optimized frontend features in React, Next, JavaScript, Redux with Material-UI and Axios, focusing on performance, accessibility, and responsiveness",
+              "Led the implementation of dark mode toggle, internationalization and accessibility improvements, enhancing UI contrast and personalization",
+              "Maintained strict coding standards and cross-browser compatibility, conducting thorough testing using Jest, Storybook and Playwright",
             ],
           },
           {
-            title: "Feature Development",
+            title: "Team Collaboration & Process",
             points: [
-              "Built View History feature with infinite scroll and filters",
-              "Implemented Dark Mode with theme persistence",
-              "Created reusable component library with Storybook",
+              "Collaborated in a cross-functional Agile team, contributing to sprint planning and backlog refinement",
+              "Performed peer PR reviews to maintain code quality and CI/CD compliance",
+              "Actively participated in sprint planning, daily standups, and retrospectives to ensure timely deliverables",
+              "Contributed to code quality through regular PR reviews as part of the review committee",
             ],
           },
         ],
@@ -96,10 +99,17 @@ const Experience = () => {
           "React",
           "Next.js",
           "TypeScript",
+          "JavaScript",
+          "React-Router",
+          "Restful APIs",
           "Redux",
           "Material-UI",
-          "WebSocket",
+          "PostgreSQL",
           "Storybook",
+          "Jest",
+          "Playwright",
+          "Axios",
+          "Agile/Scrum",
         ],
       },
     },
@@ -110,26 +120,38 @@ const Experience = () => {
       period: "Jan 2025 - Feb 2025",
       logo: "/Mercor_Logo.jpg",
       description:
-        "Developed and designed web applications for clients in Greater Vancouver region.",
-      skills: ["React", "Next.js", "Web Design"],
+        "Collaborated with OpenAI to train and evaluate LLMs for web development tasks, focusing on code generation, design implementation, and quality assessment.",
+      skills: ["React", "LLM Training", "+6"],
       details: {
         projects: [
           {
-            title: "Web Development Projects",
+            title: "OpenAI LLM Training & Evaluation",
             points: [
-              "Led web design and development projects for various clients in Greater Vancouver area",
-              "Implemented responsive and modern web designs using React and Next.js",
-              "Collaborated with remote teams to deliver high-quality web solutions",
+              "Trained LLMs by providing detailed instructions for React application development, including game implementations like Snake and Ladder",
+              "Evaluated LLM outputs based on performance, design, layout, features, responsiveness, accuracy, color schemes, and accessibility",
+              "Provided detailed feedback and ratings to improve LLM performance and output quality",
+              "Participated in collaborative meetings with OpenAI and Mercor teams to discuss progress and improvements",
+            ],
+          },
+          {
+            title: "Development & Collaboration",
+            points: [
+              "Utilized Workplus and Teams for effective project management and communication",
+              "Worked on OpenAI's platform to train and test LLM capabilities",
+              "Implemented responsive design principles in generated applications",
+              "Conducted thorough testing and validation of LLM-generated code",
             ],
           },
         ],
         technologies: [
           "React",
-          "Next.js",
-          "TypeScript",
-          "Tailwind CSS",
-          "Responsive Design",
+          "LLM Training",
+          "Code Review",
           "UI/UX Design",
+          "Responsive Design",
+          "Accessibility",
+          "Microsoft Teams",
+          "Workplus",
         ],
       },
     },
@@ -137,27 +159,42 @@ const Experience = () => {
       type: "professional",
       role: "UI/UX Developer",
       company: "Larus Technologies",
-      period: "2021 - 2024",
+      period: "Dec 2021 - May 2024",
       logo: "/LarusTech.png",
       description:
-        "Developed AI-integrated interfaces for retail and defense platforms.",
-      skills: ["React", "Redux", "SASS"],
+        "Developed AI-integrated interfaces for retail and defense platforms, focusing on real-time data visualization and user engagement.",
+      skills: ["React", "Redux", "+8"],
       details: {
         projects: [
           {
             title: "Unilever Retail Platform",
             points: [
-              "Architected AI-powered product recommendation system UI",
-              "Implemented real-time inventory tracking dashboard",
-              "Reduced page load times by 50% through code optimization",
+              "Engineered a personalized, AI-integrated UI enabling real-time product recommendations based on consumer behavior",
+              "Implemented performance optimizations and responsive layout resulting in faster rendering and improved user engagement",
+              "Utilized Microsoft Power BI for data analysis and actionable report generation",
+              "Provided support to development teams through code reviews and UI performance optimization guidance",
+              "Created interactive wireframes using Balsamiq and Miro for rapid prototyping and stakeholder feedback",
             ],
           },
           {
             title: "Total::Perception™ Defense Platform",
             points: [
-              "Redesigned mission-critical monitoring interface",
-              "Integrated LuciadLTI for advanced geospatial visualization",
-              "Implemented secure authentication and authorization",
+              "Redesigned and optimized UI for AI/ML-based ISR simulation platform using LuciadGUI",
+              "Improved real-time visualization of large-scale sensor data through asynchronous rendering",
+              "Implemented WebSocket integration for enhanced data streaming capabilities",
+              "Delivered technical demos and presentations to stakeholders",
+              "Utilized Docker containers and Virtual Machines for development and testing environments",
+            ],
+          },
+          {
+            title: "Internal SASS Application",
+            points: [
+              "Designed and developed from scratch, targeting retail clients like Loblaws and Walmart",
+              "Implemented data pipelines for processing forecast vs. actual data",
+              "Built real-time graph analysis and table comparison views using React, Redux, Chart.js",
+              "Created wireframes and designs using Figma, Balsamiq, and ant-design components",
+              "Developed RESTful APIs and tested endpoints using Postman and PGAdmin",
+              "Implemented state management using Context API and async/await patterns",
             ],
           },
         ],
@@ -165,39 +202,76 @@ const Experience = () => {
           "React",
           "Redux",
           "SASS",
-          "LuciadLTI",
+          "LuciadGUI",
           "Power BI",
-          "D3.js",
+          "Chart.js",
+          "WebSocket",
+          "Figma",
+          "ant-design",
+          "Material-UI",
+          "Context API",
+          "Docker",
+          "Virtual Machines",
+          "Postman",
+          "PGAdmin",
+          "Balsamiq",
+          "Miro",
           "OAuth2",
         ],
       },
     },
     {
       type: "education",
-      role: "Masters in Computer Science",
+      role: "Master of Engineering",
       company: "University of Ottawa",
       period: "2019 - 2021",
       logo: "/UottawaLogo.jpg",
-      description: "Specialized in Machine Learning and AI.",
-      skills: ["Python", "Transformers", "+5"],
+      description:
+        "Completed Master of Engineering in Electrical and Computer Engineering.",
+      skills: [
+        "Software Engineering",
+        "Computer Networks",
+        "Internet Technologies",
+        "Security Engineering",
+        "Project Management",
+      ],
       details: {
         projects: [
           {
-            title: "Research Focus",
+            title: "Core Specializations",
             points: [
-              "Machine Learning algorithms and applications",
-              "Deep Learning frameworks and neural networks",
-              "Computer Vision and Natural Language Processing",
+              "Advanced Computer Networks and Communication Systems",
+              "Software Engineering Project Management and Best Practices",
+              "Photonics and Optical Network Technologies",
+              "Theory of Semiconductor Devices and Mobile Technologies",
+              "Security Engineering and System Survivability",
+              "Communication Strategies and Professional Development",
+            ],
+          },
+          {
+            title: "Key Achievements",
+            points: [
+              "Completed comprehensive coursework in Computer Communication Networks and Photonics Networks",
+              "Mastered advanced topics in Survivable Optical Networks and Communication Systems",
+              "Specialized in Internet Technologies and Mobile Communications",
+              "Developed expertise in Security Engineering and Operational Excellence",
+              "Achieved excellent academic performance with multiple A/A+ grades",
             ],
           },
         ],
         technologies: [
-          "Python",
-          "TensorFlow",
-          "PyTorch",
-          "OpenCV",
-          "NLTK",
-          "Scikit-learn",
+          "Computer Networks",
+          "Optical Communications",
+          "Network Security",
+          "Project Management",
+          "Semiconductor Technology",
+          "Mobile Communications",
+          "System Design",
+          "Engineering Leadership",
+          "Communication Protocols",
+          "Network Architecture",
+          "System Optimization",
+          "Technical Documentation",
         ],
       },
     },
@@ -208,24 +282,26 @@ const Experience = () => {
       period: "Nov 2017 - July 2019",
       logo: "/AccentureLogo.png",
       description:
-        "Developed reusable UI components and optimized applications for major retail clients.",
-      skills: ["React", "JavaScript", "UI Components"],
+        "Developed reusable UI components and optimized applications for major retail clients, focusing on user engagement and code efficiency.",
+      skills: ["React", "JavaScript", "+7"],
       details: {
         projects: [
           {
             title: "Loblaws UI Component Library",
             points: [
-              "Developed and shared 15+ reusable UI components for Loblaws, including modal windows and interactive forms, using React, enhancing code efficiency and reducing redundant code.",
-              "Conducted 20+ development review sessions, fostering a culture of collaborative feedback and enhancing design quality and product usability.",
-              "Implemented best practices for component reusability and maintainability across multiple projects.",
+              "Developed and shared 15+ reusable UI components for Loblaws, including modal windows and interactive forms",
+              "Enhanced code efficiency and reduced redundant code through component reusability",
+              "Conducted 20+ development review sessions, fostering a culture of collaborative feedback",
+              "Enhanced design quality and product usability through regular code reviews and feedback sessions",
             ],
           },
           {
             title: "Vera-Style Target Application",
             points: [
-              "Optimized Vera-Style for Target, a fashion trend recommendation application, focusing on improved product filtering and personalized recommendations.",
-              "Drove increase in engagement as measured by average session duration and pageviews.",
-              "Implemented responsive design principles ensuring consistent experience across devices.",
+              "Optimized Vera-Style for Target, a fashion trend recommendation application",
+              "Improved product filtering and personalized recommendations",
+              "Drove increase in engagement as measured by average session duration and pageviews",
+              "Implemented responsive design principles ensuring consistent experience across devices",
             ],
           },
         ],
@@ -237,6 +313,8 @@ const Experience = () => {
           "Git",
           "Agile/Scrum",
           "RESTful APIs",
+          "UI Components",
+          "Performance Optimization",
         ],
       },
     },
@@ -244,11 +322,11 @@ const Experience = () => {
       type: "education",
       role: "Bachelor in Engineering",
       company: "Visvesvaraya Technological University",
-      period: "2012 - 2016",
+      period: "2013 - 2017",
       logo: "/VTULogo.png",
       description:
         "Electronics and Communication Engineering with focus on Computer Science fundamentals.",
-      skills: ["Python", "C++", "Java"],
+      skills: ["Python", "C++", "Java", "MATLAB", "JavaScript"],
       details: {
         projects: [
           {
@@ -274,7 +352,7 @@ const Experience = () => {
   ];
 
   const skillsByCategory = {
-    "💻 Frontend Tech": [
+    "💻 Frontend Stack": [
       {
         title: "React.js",
         icon: <FaReact className="text-blue-500" />,
@@ -319,8 +397,48 @@ const Experience = () => {
         title: "Redux & Context API",
         icon: <SiRedux className="text-purple-500" />,
       },
+      {
+        title: "Webpack",
+        icon: <SiWebpack className="text-blue-500" />,
+      },
+      {
+        title: "Babel",
+        icon: <SiBabel className="text-yellow-500" />,
+      },
+      {
+        title: "WebSocket",
+        icon: <AiFillThunderbolt className="text-yellow-400" />,
+      },
+      {
+        title: "Figma",
+        icon: <FaFigma className="text-purple-500" />,
+      },
+      {
+        title: "Miro",
+        icon: <SiMiro className="text-yellow-500" />,
+      },
+      {
+        title: "UI/UX Best Practices",
+        icon: <MdOutlineDesignServices className="text-blue-500" />,
+      },
+      {
+        title: "Chart.js",
+        icon: <FaChartLine className="text-green-500" />,
+      },
+      {
+        title: "Responsive Design",
+        icon: <BsGlobe className="text-green-500" />,
+      },
+      {
+        title: "Accessibility",
+        icon: <TbAccessible className="text-blue-600" />,
+      },
     ],
     "🔗 Backend, API & Database": [
+      {
+        title: "Node.js",
+        icon: <FaNodeJs className="text-green-600" />,
+      },
       {
         title: "RESTful APIs",
         icon: <TbApi className="text-green-500" />,
@@ -345,63 +463,19 @@ const Experience = () => {
         title: "Python",
         icon: <FaPython className="text-blue-500" />,
       },
-      {
-        title: "WebSockets",
-        icon: <AiFillThunderbolt className="text-yellow-400" />,
-      },
-    ],
-    "⚡ Performance & Optimization": [
-      {
-        title: "Lazy Loading",
-        icon: <BsSpeedometer className="text-orange-500" />,
-      },
-      {
-        title: "Code Splitting",
-        icon: <AiOutlineApartment className="text-blue-500" />,
-      },
-      {
-        title: "Webpack",
-        icon: <SiWebpack className="text-blue-500" />,
-      },
-      {
-        title: "Babel",
-        icon: <SiBabel className="text-yellow-500" />,
-      },
-      {
-        title: "Responsive Design",
-        icon: <BsGlobe className="text-green-500" />,
-      },
-      {
-        title: "Accessibility",
-        icon: <TbAccessible className="text-blue-600" />,
-      },
-    ],
-    "🎨 UI/UX & Design Tools": [
-      {
-        title: "Figma",
-        icon: <FaFigma className="text-purple-500" />,
-      },
-      {
-        title: "Miro",
-        icon: <SiMiro className="text-yellow-500" />,
-      },
-      {
-        title: "UI/UX Best Practices",
-        icon: <MdOutlineDesignServices className="text-blue-500" />,
-      },
-      {
-        title: "Chart.js",
-        icon: <FaChartLine className="text-green-500" />,
-      },
     ],
     "🧪 Testing & Debugging": [
       {
-        title: "Jest & RTL",
+        title: "Jest",
         icon: <SiJest className="text-red-600" />,
       },
       {
-        title: "Cypress",
-        icon: <SiCypress className="text-gray-700 dark:text-gray-300" />,
+        title: "React Testing Library",
+        icon: <BiTestTube className="text-blue-500" />,
+      },
+      {
+        title: "Playwright",
+        icon: <BiTestTube className="text-purple-500" />,
       },
       {
         title: "Storybook",
@@ -411,11 +485,31 @@ const Experience = () => {
         title: "Chrome DevTools",
         icon: <AiFillTool className="text-blue-500" />,
       },
+      {
+        title: "Responsively App",
+        icon: <BsGlobe className="text-green-500" />,
+      },
+      {
+        title: "NVDA Testing",
+        icon: <TbAccessible className="text-blue-600" />,
+      },
+      {
+        title: "Lighthouse",
+        icon: <AiFillThunderbolt className="text-yellow-400" />,
+      },
     ],
     "🚀 DevOps & Deployment": [
       {
         title: "Git & GitHub",
         icon: <FaGithub className="text-gray-800 dark:text-white" />,
+      },
+      {
+        title: "Git Bash",
+        icon: <FaGitAlt className="text-orange-500" />,
+      },
+      {
+        title: "SourceTree",
+        icon: <FaGitAlt className="text-blue-500" />,
       },
       {
         title: "GitHub Actions",
@@ -444,8 +538,16 @@ const Experience = () => {
         icon: <SiNotion className="text-black dark:text-white" />,
       },
       {
-        title: "Slack & Teams",
+        title: "Slack",
         icon: <FaSlack className="text-purple-500" />,
+      },
+      {
+        title: "Microsoft Teams",
+        icon: <FaMicrosoft className="text-blue-500" />,
+      },
+      {
+        title: "Google Meet",
+        icon: <SiGooglecloud className="text-blue-500" />,
       },
       {
         title: "Discord",
@@ -474,7 +576,7 @@ const Experience = () => {
           </h2>
 
           {/* Experience Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 h-full">
             {experiences.map((exp, index) => (
               <motion.div
                 key={index}
@@ -484,48 +586,88 @@ const Experience = () => {
                 viewport={{ once: true }}
                 className="relative group"
               >
-                <div className="bg-white dark:bg-gray-800/50 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <div className="flex items-start gap-6">
-                    <div className="w-16 h-16 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center p-2">
-                      <img
-                        src={exp.logo}
-                        alt={exp.company}
-                        className="w-12 h-12 object-contain"
-                      />
+                <div className="bg-white dark:bg-gray-800/50 rounded-xl p-4 sm:p-6 md:p-8 shadow-lg hover:shadow-xl transition-all duration-300 h-full w-full relative hover:scale-[1.02] transform hover:-translate-y-1 cursor-pointer overflow-hidden">
+                  <div className="flex flex-col h-full">
+                    <div className="flex items-start gap-6">
+                      <div className="w-16 h-16 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center p-2 flex-shrink-0">
+                        <img
+                          src={exp.logo}
+                          alt={exp.company}
+                          className="w-12 h-12 object-contain"
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                          {exp.role}
+                        </h3>
+                        <p className="text-lg text-blue-500 dark:text-blue-400">
+                          {exp.company}
+                        </p>
+                        <p className="text-base text-blue-500/80 dark:text-blue-400/80">
+                          {exp.period}
+                        </p>
+                        <p className="mt-4 text-lg text-gray-600 dark:text-gray-400 line-clamp-2">
+                          {exp.description}
+                        </p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                        {exp.role}
-                      </h3>
-                      <p className="text-lg text-blue-500 dark:text-blue-400">
-                        {exp.company}
-                      </p>
-                      <p className="text-base text-blue-500/80 dark:text-blue-400/80">
-                        {exp.period}
-                      </p>
-                      <p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-                        {exp.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2 mt-6">
-                        {exp.skills.map((skill, idx) => (
-                          <span
-                            key={idx}
-                            className="px-4 py-1.5 text-sm bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full"
-                          >
-                            {skill}
-                          </span>
-                        ))}
+
+                    <div className="mt-auto">
+                      <div className="flex flex-wrap gap-2 w-full min-w-0 mt-6">
+                        {exp.type === "education" ? (
+                          // Show all skills for education
+                          exp.skills.map((skill, idx) => (
+                            <span
+                              key={idx}
+                              className="px-4 py-1.5 text-sm bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full max-w-full truncate break-words"
+                            >
+                              {skill}
+                            </span>
+                          ))
+                        ) : (
+                          // Show 2 skills + count for work experience
+                          <>
+                            {exp.skills.slice(0, 2).map((skill, idx) => (
+                              <span
+                                key={idx}
+                                className="px-4 py-1.5 text-sm bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full max-w-full truncate break-words"
+                              >
+                                {skill}
+                              </span>
+                            ))}
+                            {exp.skills[2] && (
+                              <span className="px-4 py-1.5 text-sm bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full max-w-full truncate break-words">
+                                {exp.skills[2]}
+                              </span>
+                            )}
+                          </>
+                        )}
                       </div>
                     </div>
                   </div>
 
                   {/* View Details Button */}
-                  <button
-                    onClick={() => setSelectedExp(exp)}
-                    className="absolute bottom-8 right-8 text-blue-500 hover:text-blue-600 transition-colors duration-300"
-                  >
-                    View Details
-                  </button>
+                  {exp.type !== "education" && (
+                    <button
+                      onClick={() => setSelectedExp(exp)}
+                      className="absolute bottom-8 right-8 flex items-center gap-2 text-blue-500 hover:text-blue-600 bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg transition-all duration-300 opacity-0 group-hover:opacity-100"
+                    >
+                      View Details
+                      <svg
+                        className="w-4 h-4"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </button>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -580,18 +722,18 @@ const Experience = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50"
+                className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 overflow-y-auto"
               >
                 <motion.div
                   initial={{ scale: 0.95, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   exit={{ scale: 0.95, opacity: 0 }}
-                  className="relative w-full max-w-4xl bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-2xl"
+                  className="relative w-full max-w-4xl bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-2xl my-8 max-h-[90vh] overflow-y-auto"
                 >
                   {/* Close Button */}
                   <button
                     onClick={() => setSelectedExp(null)}
-                    className="absolute top-6 right-6 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+                    className="absolute top-6 right-6 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 z-10"
                   >
                     <IoClose size={28} />
                   </button>
