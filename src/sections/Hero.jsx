@@ -177,7 +177,7 @@ const Hero = () => {
               <div className="absolute inset-0 w-full h-full rounded-full bg-gradient-to-br from-purple-200 via-white to-purple-100 dark:from-[#4c3575] dark:via-[#1e1935] dark:to-[#6d28d9] z-0"></div>
               <div className="absolute inset-0 w-full h-full rounded-full bg-[#e9d5ff80] dark:bg-[#4c357580] z-10"></div>
               <img
-                src="/Teju_inPixio.png"
+                src={process.env.PUBLIC_URL + "/Teju_inPixio.png"}
                 alt="Tejaswini"
                 className="w-full h-full object-cover rounded-full relative z-20"
               />

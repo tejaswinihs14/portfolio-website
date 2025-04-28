@@ -70,7 +70,7 @@ const Experience = () => {
       role: "Frontend Engineer",
       company: "Vosyn.Inc",
       period: "Nov 2024 - Present",
-      logo: "/vosynLogo.png",
+      logo: process.env.PUBLIC_URL + "/vosynLogo.png",
       description:
         "Implemented and maintained Settings frontend development for VosynVerse platform.",
       skills: ["React", "Next.js", "+5"],
@@ -118,7 +118,7 @@ const Experience = () => {
       role: "Web Design and Development Expert",
       company: "Mercor · Freelance",
       period: "Jan 2025 - Feb 2025",
-      logo: "/Mercor_Logo.jpg",
+      logo: process.env.PUBLIC_URL + "/Mercor_Logo.jpg",
       description:
         "Collaborated with OpenAI to train and evaluate LLMs for web development tasks, focusing on code generation, design implementation, and quality assessment.",
       skills: ["React", "LLM Training", "+6"],
@@ -160,7 +160,7 @@ const Experience = () => {
       role: "UI/UX Developer",
       company: "Larus Technologies",
       period: "Dec 2021 - May 2024",
-      logo: "/LarusTech.png",
+      logo: process.env.PUBLIC_URL + "/LarusTech.png",
       description:
         "Developed AI-integrated interfaces for retail and defense platforms, focusing on real-time data visualization and user engagement.",
       skills: ["React", "Redux", "+8"],
@@ -225,7 +225,7 @@ const Experience = () => {
       role: "Master of Engineering",
       company: "University of Ottawa",
       period: "2019 - 2021",
-      logo: "/UottawaLogo.jpg",
+      logo: process.env.PUBLIC_URL + "/UottawaLogo.jpg",
       description:
         "Completed Master of Engineering in Electrical and Computer Engineering.",
       skills: [
@@ -280,7 +280,7 @@ const Experience = () => {
       role: "Associate Software Engineer",
       company: "Accenture Solution Pvd Ltd",
       period: "Nov 2017 - July 2019",
-      logo: "/AccentureLogo.png",
+      logo: process.env.PUBLIC_URL + "/AccentureLogo.png",
       description:
         "Developed reusable UI components and optimized applications for major retail clients, focusing on user engagement and code efficiency.",
       skills: ["React", "JavaScript", "+7"],
@@ -323,7 +323,7 @@ const Experience = () => {
       role: "Bachelor in Engineering",
       company: "Visvesvaraya Technological University",
       period: "2013 - 2017",
-      logo: "/VTULogo.png",
+      logo: process.env.PUBLIC_URL + "/VTULogo.png",
       description:
         "Electronics and Communication Engineering with focus on Computer Science fundamentals.",
       skills: ["Python", "C++", "Java", "MATLAB", "JavaScript"],

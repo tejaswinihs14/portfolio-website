@@ -31,7 +31,7 @@ const About = () => {
             <div className="relative h-full">
               <div className="w-full h-full rounded-3xl overflow-hidden">
                 <img
-                  src="/Tejuuu.JPG"
+                  src={process.env.PUBLIC_URL + "/Tejuuu.JPG"}
                   alt="Tejaswini"
                   className="w-full h-full object-cover rounded-3xl"
                 />
